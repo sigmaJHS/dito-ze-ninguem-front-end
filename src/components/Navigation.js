@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -9,16 +11,19 @@ import style from './Navigation.module.css';
 function Navigation()
 {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar id={style['navigation']} expand="lg">
       <Container>
-        <Navbar.Brand href="#home">
-          <img className={style.brand} alt="Dito Zé Ninguém" src={logo} />
+        <Navbar.Brand>
+          <Link to="/">
+            <img className={style.brand} alt="Dito Zé Ninguém" src={logo} />
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="nav" />
         <Navbar.Collapse id="nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#contato">Contato</Nav.Link>
+              <Link to="/">Home</Link>
+              <Link to="/sobre">A Banda</Link>
+              <Link to="/contato">Contato</Link>
             </Nav>
         </Navbar.Collapse>
       </Container>
