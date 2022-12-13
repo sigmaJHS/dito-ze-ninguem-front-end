@@ -1,6 +1,6 @@
 import bg from './../assets/bg.jpg';
 
-import style from './../style/FixedBackground.module.scss';
+import style from './FixedBackground.module.scss';
 
 function FixedBackground()
 {

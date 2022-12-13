@@ -1,0 +1,32 @@
+@import './../style/main.scss';
+
+#navigation {
+  background-color: rgba($primary, .8);
+}
+
+.brand {
+  width: 200px;
+}
+
+.navigation-nav{
+  margin-top: 20px;
+  width: 100%;
+
+  @media (min-width: 992px) {
+    margin-top: 0;
+    justify-content: right;
+  }
+
+  .nav-item {
+    color: $light;
+    text-decoration: none;
+    padding: 15px;
+    margin: 5px 0;
+  
+    &:hover,
+    &.active {
+      color: $light;
+      background-color: rgba($light, .2);
+    }
+  }
+}
