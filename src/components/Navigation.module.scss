@@ -12,9 +12,10 @@
   margin-top: 20px;
   width: 100%;
 
-  @media (min-width: 992px) {
+  @include media-breakpoint-up(lg){
     margin-top: 0;
     justify-content: right;
+    width: 100%;
   }
 
   .nav-item {
