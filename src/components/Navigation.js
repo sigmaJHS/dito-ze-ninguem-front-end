@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 import logo from './../assets/logo.png';
 
-import style from './Navigation.module.css';
+import style from './../style/Navigation.module.scss';
 
 function Navigation()
 {
