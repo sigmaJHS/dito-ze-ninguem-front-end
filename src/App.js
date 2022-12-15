@@ -45,7 +45,7 @@ function App() {
     <main>
       <FixedBackground />
       <Navigation routes={navigableRoutes} />
-      <Container>
+      <Container fluid="lg" style={{backgroundColor: 'rgba(0,0,0,.6)', paddingTop: '50px'}}>
         <Switch>
           {routes}
         </Switch>

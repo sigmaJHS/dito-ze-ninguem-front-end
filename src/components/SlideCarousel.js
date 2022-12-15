@@ -30,25 +30,28 @@ function SlideCarousel () {
     }
   ];
   return (
-    <Carousel>
-      {
-        slides.map(
-          function (current) {
-            return (
-              <Carousel.Item key={current.id}>
-                <div
-                  className={style['carousel-img']}
-                  style={{backgroundImage: 'url(' + current.img + ')'}}
-                ></div>
-                <Carousel.Caption>
-                  <h4>{current.caption}</h4>
-                </Carousel.Caption>
-              </Carousel.Item>
-            )
-          }
-        )
-      }
-    </Carousel>
+    <div className={style['slide-holder']}>
+      <Carousel id={style['slide-carousel']}>
+        {
+          slides.map(
+            function (current) {
+              return (
+                <Carousel.Item key={current.id}>
+                  <div
+                    className={style['carousel-img']}
+                    style={{backgroundImage: 'url(' + current.img + ')'}}
+                  ></div>
+                  <Carousel.Caption>
+                    <h4>{current.caption}</h4>
+                  </Carousel.Caption>
+                </Carousel.Item>
+              )
+            }
+          )
+        }
+      </Carousel>
+    </div>
+    
   )
 }
 
