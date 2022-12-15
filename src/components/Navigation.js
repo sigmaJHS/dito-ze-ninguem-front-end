@@ -8,7 +8,7 @@ import logo from './../assets/logo.png';
 
 import style from './Navigation.module.scss';
 
-function Navigation()
+function Navigation(props)
 {
   const location = useLocation();
 
@@ -23,15 +23,17 @@ function Navigation()
         <Navbar.Toggle id={style['nav-toggle']} aria-controls="nav" />
         <Navbar.Collapse id="nav">
           <Nav className={'me-auto ' + style['navigation-nav']} activeKey={location.pathname}>
-            <Link to="/" className={style['nav-item']}>
-              <Nav.Link as="div" eventKey="/">Home</Nav.Link>
-            </Link>
-            <Link to="/sobre" className={style['nav-item']}>
-              <Nav.Link as="div" eventKey="/sobre">A Banda</Nav.Link>
-            </Link>
-            <Link to="/contato" className={style['nav-item']}>
-              <Nav.Link as="div" eventKey="/contato">Contato</Nav.Link>
-            </Link>
+            {
+              props.routes.map(
+                function (current) {
+                  return (
+                    <Link to={current.path} className={style['nav-item']}>
+                      <Nav.Link as="div" eventKey={current.path}>{current.name}</Nav.Link>
+                    </Link>
+                  )
+                }
+              )
+            }
           </Nav>
         </Navbar.Collapse>
       </Container>
