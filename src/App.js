@@ -32,32 +32,22 @@ function App() {
     }
   ]
 
+  const routes = [];
+  for(let [k,v] of navigableRoutes.entries()){
+    routes.push(
+      <Route key={k} path={v.path} exact={v.exact}>
+        <v.page />
+      </Route>
+    );
+  }
+
   return (
     <main>
       <FixedBackground />
       <Navigation routes={navigableRoutes} />
       <Container>
         <Switch>
-          {
-            navigableRoutes.map(
-              function(current){
-                return (
-                  <Route path={current.path} exact={current.exact}>
-                    <current.page />
-                  </Route>
-                )
-              }
-            )
-          }
-          <Route path='/' exact={true}>
-            <HomePage />
-          </Route>
-          <Route path='/sobre'>
-            <AboutPage />
-          </Route>
-          <Route path='/contato'>
-            <ContactPage />
-          </Route>
+          {routes}
         </Switch>
       </Container>
     </main>

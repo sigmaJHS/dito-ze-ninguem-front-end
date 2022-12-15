@@ -12,10 +12,19 @@ function Navigation(props)
 {
   const location = useLocation();
 
+  const links = [];
+  for(let [k,v] of props.routes.entries()){
+    links.push(
+      <Link key={k} to={v.path} className={style['nav-item']}>
+        <Nav.Link as="div" eventKey={v.path}>{v.name}</Nav.Link>
+      </Link>
+    );
+  }
+
   return (
     <Navbar id={style['navigation']} expand="lg" variant="dark">
       <Container>
-        <Navbar.Brand>
+        <Navbar.Brand as="div">
           <Link to="/">
             <img className={style.brand} alt="Dito Zé Ninguém" src={logo} />
           </Link>
@@ -23,17 +32,7 @@ function Navigation(props)
         <Navbar.Toggle id={style['nav-toggle']} aria-controls="nav" />
         <Navbar.Collapse id="nav">
           <Nav className={'me-auto ' + style['navigation-nav']} activeKey={location.pathname}>
-            {
-              props.routes.map(
-                function (current) {
-                  return (
-                    <Link to={current.path} className={style['nav-item']}>
-                      <Nav.Link as="div" eventKey={current.path}>{current.name}</Nav.Link>
-                    </Link>
-                  )
-                }
-              )
-            }
+            {links}
           </Nav>
         </Navbar.Collapse>
       </Container>
