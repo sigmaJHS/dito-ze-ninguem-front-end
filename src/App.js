@@ -3,8 +3,6 @@ import { Route, Switch } from 'react-router-dom';
 import Navigation from './components/Navigation'
 import FixedBackground from './components/FixedBackground'
 
-import Container from 'react-bootstrap/Container';
-
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
@@ -45,20 +43,9 @@ function App() {
     <main>
       <FixedBackground />
       <Navigation routes={navigableRoutes} />
-      <Container
-        fluid="lg"
-        style={
-          {
-            backgroundColor: 'rgba(0,0,0,.6)',
-            paddingTop: '50px',
-            paddingBottom: '50px'
-          }
-        }
-        >
-        <Switch>
-          {routes}
-        </Switch>
-      </Container>
+      <Switch>
+        {routes}
+      </Switch>
     </main>
   );
 }
