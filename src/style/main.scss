@@ -3,7 +3,33 @@ $primary:       #000;
 $secondary:     #d9580c;
 $light:         #fefefe;
 $dark:          #000;
+$link:          #0C8DD9;
 
-$navbar-dark-color: rgba(#fff, 1);
+$high-emphasys-text: rgba(255,255,255,.82);
+$low-emphasys-text: rgba(255,255,255,.65);
+
+$navbar-dark-color:                 $low-emphasys-text;
+$navbar-dark-hover-color:           $high-emphasys-text;
+$navbar-dark-active-color:          $high-emphasys-text;
 
 @import "~bootstrap/scss/bootstrap";
+
+body,
+html {
+  color: $low-emphasys-text;
+}
+
+a {
+  color: $link;
+
+  &:focus,
+  &:hover {
+    color: darken($link, 15%);
+  }
+}
+
+.page-title {
+  color: $high-emphasys-text;
+  text-align: center;
+  margin-bottom: 50px;
+}
