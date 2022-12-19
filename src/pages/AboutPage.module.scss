@@ -67,3 +67,11 @@
     }
   }
 }
+
+#band-section {
+  .img {
+    @include media-breakpoint-up(lg){
+      height: 400px
+    }
+  }
+}

@@ -47,7 +47,7 @@ function AboutPage(){
     <div>
       <h1 className='page-title'>A Banda</h1>
       <div className='wrapper-container'>
-        <div className={style['section']}>
+        <div className={style['section']} id={style['band-section']}>
           <Container fluid>
             <Row>
               <Col xs="6" lg="4"
