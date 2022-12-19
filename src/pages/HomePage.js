@@ -4,9 +4,9 @@ import SlideCarousel from './../components/SlideCarousel'
 
 function HomePage(){
   return(
-    <Container className='wrapper-container' fluid="lg">
+    <div className='wrapper-container'>
       <SlideCarousel />
-    </Container>
+    </div>
   )
 }
 
