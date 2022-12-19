@@ -1,8 +1,13 @@
 import {Container, Row, Col} from 'react-bootstrap';
+import ContactForm from './../components/ContactForm';
 
 import style from './ContactPage.module.scss';
 
 function ContactPage(){
+  function sendHTTPRequest(formData) {
+    console.log(formData);
+  }
+
   return(
     <Container>
       <Row>
@@ -29,6 +34,7 @@ function ContactPage(){
           <Container className='wrapper-container'>
             <h4 className={style['contact-title']}>Ou envie uma mensagem agora mesmo!</h4>
             <p className={style['contact-description']}>Mande suas dúvidas, sugestões, desabafos, devaneios, epifanias. Buscamos responder dentro de 24 horas</p>
+            <ContactForm onFormSubmited={sendHTTPRequest} />
           </Container>
         </Col>
       </Row>
