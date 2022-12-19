@@ -22,15 +22,15 @@ function ContactForm (props) {
   return (
     <form className={style['form']} onSubmit={submitHandler}>
       <div className={style['control']}>
-        <label htmlFor='nome'>Seu Nome:</label>
+        <label htmlFor='name'>Seu Nome:</label>
         <input className={style['input']} type='text' name='name' ref={nameRef} />
       </div>
       <div className={style['control']}>
         <label htmlFor='email'>Seu Email:</label>
-        <input className={style['input']} type='email' name='email' ref={emailRef} />
+        <input className={style['input']} name='email' ref={emailRef} />
       </div>
       <div className={style['control']}>
-        <label htmlFor='texto'>Sua Mensagem:</label>
+        <label htmlFor='text'>Sua Mensagem:</label>
         <textarea className={style['input']} name='text' ref={textRef}></textarea>
       </div>
       <div className={style['actions']}>
