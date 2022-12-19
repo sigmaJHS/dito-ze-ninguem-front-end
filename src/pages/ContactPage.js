@@ -16,7 +16,7 @@ function ContactPage(){
           <Row>
             <Col md="12" lg="6">
               <Container>
-                <h4 className={style['contact-title']}>Nos encontre pela internet afora</h4>
+                <h5 className={style['contact-title']}>Nos encontre pela internet afora</h5>
                 <p className={style['contact-description']}>Você pode nos encontrar nas mídias sociais, enviar um email ou conversar diretamente com um representante pelo whatsapp!</p>
                 <div className={style['contact-row']}>
                   <div className={style['contact-label']}>Whatsapp (Juliana):</div>
@@ -34,7 +34,7 @@ function ContactPage(){
             </Col>
             <Col md="12" lg="6">
               <Container>
-                <h4 className={style['contact-title']}>Ou envie uma mensagem agora mesmo!</h4>
+                <h5 className={style['contact-title']}>Ou envie uma mensagem agora mesmo!</h5>
                 <p className={style['contact-description']}>Mande suas dúvidas, sugestões, desabafos, devaneios, epifanias. Buscamos responder dentro de 24 horas</p>
                 <ContactForm onFormSubmited={sendHTTPRequest} />
               </Container>
