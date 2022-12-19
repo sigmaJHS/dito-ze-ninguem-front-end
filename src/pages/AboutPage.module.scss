@@ -57,5 +57,13 @@
     @include media-breakpoint-up(sm){
       padding: 15px;
     }
+
+    .title {
+      color: $high-emphasys-text;
+    }
+    .subtitle,
+    .text {
+      color: $low-emphasys-text;
+    }
   }
 }
