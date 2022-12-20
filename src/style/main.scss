@@ -5,6 +5,7 @@ $light:         #fefefe;
 $dark:          #000;
 $link:          #0C8DD9;
 
+$wrapper-container-color: rgba($dark,.6);
 $high-emphasys-text: rgba(255,255,255,.82);
 $low-emphasys-text: rgba(255,255,255,.65);
 
@@ -37,7 +38,7 @@ a {
 
 .wrapper-container {
   padding: 50px 0;
-  background: rgba(0,0,0,.6);
+  background: $wrapper-container-color;
 
   @include media-breakpoint-up(sm){
     padding: 50px 15px;

@@ -1,6 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
 
 import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 import FixedBackground from './components/FixedBackground'
 
 import HomePage from './pages/HomePage'
@@ -53,6 +54,7 @@ function App() {
       <Switch>
         {routes}
       </Switch>
+      <Footer />
     </main>
   );
 }
