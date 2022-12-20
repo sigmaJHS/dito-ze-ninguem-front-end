@@ -1,0 +1,30 @@
+@import './../style/main.scss';
+
+.image-placeholder {
+  overflow: hidden;
+  cursor: pointer;
+  transition: .4s;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 300px;
+  background: #99999922;
+
+  &:hover,
+  &:focus {
+    opacity: .8
+  }
+
+  @include media-breakpoint-up(sm) {
+    height: 250px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 200px;
+  }
+  
+  img {
+    height: 100%;
+  }
+}

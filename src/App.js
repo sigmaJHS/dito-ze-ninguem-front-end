@@ -5,6 +5,7 @@ import FixedBackground from './components/FixedBackground'
 
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
+import GalleryPage from './pages/GalleryPage'
 import ContactPage from './pages/ContactPage'
 
 function App() {
@@ -20,6 +21,12 @@ function App() {
       name: 'A Banda',
       path: '/sobre',
       page: AboutPage,
+      exact: false
+    },
+    {
+      name: 'Galeria',
+      path: '/galeria',
+      page: GalleryPage,
       exact: false
     },
     {
