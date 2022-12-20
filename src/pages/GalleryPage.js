@@ -31,32 +31,35 @@ function GalleryPage () {
   }
   
   return (
-    <div className='wrapper-container'>
-      <FsLightbox
-				sources={Array.from(images.entries(), (value) => value[1].src)}
-				toggler={lightboxController.toggler}
-        slide={lightboxController.slide}
-			/>
-      <Container>
-        <Row>
-        {
-          images.map(
-            function (image) {
-              return (
-                <Col key={image.id} sm="6" lg="4" xl="3">
-                  <div
-                    className={style['image-placeholder']}
-                    onClick={() => openLightboxOnSlide(image.id)}
-                  >
-                    <img src={image.src} alt={image.src} />
-                  </div>
-                </Col>
-              );
-            }
-          )
-        }
-        </Row>
-      </Container>
+    <div>
+      <h1 className='page-title'>Galeria de Fotos</h1>
+      <div className='wrapper-container'>
+        <FsLightbox
+          sources={Array.from(images.entries(), (value) => value[1].src)}
+          toggler={lightboxController.toggler}
+          slide={lightboxController.slide}
+        />
+        <Container>
+          <Row>
+          {
+            images.map(
+              function (image) {
+                return (
+                  <Col key={image.id} sm="6" lg="4" xl="3">
+                    <div
+                      className={style['image-placeholder']}
+                      onClick={() => openLightboxOnSlide(image.id)}
+                    >
+                      <img src={image.src} alt={image.src} />
+                    </div>
+                  </Col>
+                );
+              }
+            )
+          }
+          </Row>
+        </Container>
+      </div>
     </div>
   )
 }
