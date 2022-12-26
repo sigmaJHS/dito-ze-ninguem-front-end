@@ -54,7 +54,7 @@ function EventSchedule () {
             schedule.map(
               function (event) {
                 return (
-                  <tr>
+                  <tr key={event.id}>
                     <td className={style['date-column']}>
                       <div className={style['day']}>
                         {event.date.getDate()}
