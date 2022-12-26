@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import {Container, Row, Col} from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import FsLightbox from "fslightbox-react";
 
 import style from './GalleryPage.module.scss';
@@ -50,7 +51,7 @@ function GalleryPage () {
                       className={style['image-placeholder']}
                       onClick={() => openLightboxOnSlide(image.id)}
                     >
-                      <img src={image.src} alt={image.src} />
+                      <LazyLoadImage src={image.src} alt={image.src} />
                     </div>
                   </Col>
                 );
