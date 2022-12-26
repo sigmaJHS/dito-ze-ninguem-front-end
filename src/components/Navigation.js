@@ -22,7 +22,7 @@ function Navigation(props)
   }
 
   return (
-    <Navbar id={style['navigation']} expand="lg" variant="dark">
+    <Navbar id={style['navigation']} collapseOnSelect={true} expand="lg" variant="dark">
       <Container>
         <Navbar.Brand as="div">
           <Link to="/">
