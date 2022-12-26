@@ -7,6 +7,7 @@ import FixedBackground from './components/FixedBackground'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import GalleryPage from './pages/GalleryPage'
+import EventSchedule from './pages/EventSchedule'
 import ContactPage from './pages/ContactPage'
 
 function App() {
@@ -28,6 +29,12 @@ function App() {
       name: 'Galeria',
       path: '/galeria',
       page: GalleryPage,
+      exact: false
+    },
+    {
+      name: 'Agenda',
+      path: '/agenda',
+      page: EventSchedule,
       exact: false
     },
     {

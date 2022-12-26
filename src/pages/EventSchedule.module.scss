@@ -1,0 +1,75 @@
+@import './../style/main.scss';
+
+.table {
+  width: 100%;
+  color: $high-emphasys-text;
+
+  tr {
+
+    &:first-of-type {
+      td {
+        padding-top: 0;
+      }
+    }
+    
+    &:not(:first-of-type) {
+      border-top: 1px solid $light;
+    }
+
+    td {
+      padding: 40px 5px;
+
+      &.date-column {
+        text-align: center;
+
+        .day {
+          font-size: 56px;
+          line-height: 1;
+        }
+        .month {
+          text-transform: uppercase;
+        }
+      }
+
+      &.info-column {
+        .place {
+          color: $low-emphasys-text;
+          margin-bottom: 30px;
+
+          @include media-breakpoint-up(xl) {
+            margin-bottom: 0;
+          }
+        }
+
+        .button {
+          @include media-breakpoint-up(xl) {
+            display: none;
+          }
+        }
+      }
+
+      &.button-column {
+        display: none;
+        vertical-align: middle;
+
+        @include media-breakpoint-up(xl) {
+          display: table-cell;
+        }
+      }
+
+      .button {
+        color: $low-emphasys-text;
+        text-decoration: none;
+        line-height: 1;
+        padding: 10px;
+        border: 1px solid $low-emphasys-text;
+
+        &:hover,
+        &:focus {
+          background: $low-emphasys-text;
+          color: $dark;
+        }
+      }
+    }
+  }
+}
