@@ -66,7 +66,7 @@ function AboutPage(){
           </Container>
         </div>
       </div>
-      <h1 class='page-title'>Os Membros</h1>
+      <h1 className='page-title'>Os Membros</h1>
       <div className='wrapper-container'>
       {
         members.map(
