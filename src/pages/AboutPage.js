@@ -1,4 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import style from './AboutPage.module.scss';
 
@@ -50,14 +51,9 @@ function AboutPage(){
         <div className={style['section']} id={style['band-section']}>
           <Container fluid>
             <Row>
-              <Col xs="6" lg="4"
-                className={style['img']}
-                style={
-                  {
-                    backgroundImage: 'url(' + dito + ')'
-                  }
-                }
-              ></Col>
+              <Col xs="6" lg="4" className={style['image-placeholder']}>
+                <LazyLoadImage className={style['img']} src={dito} alt='Dito Zé Ninguém' />
+              </Col>
               <Col xs="6" lg="8" className={style['info']}>
                 <h5 className={style['title']}>Dito Zé Ninguém</h5>
                 <p className={style['text']}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -76,14 +72,8 @@ function AboutPage(){
               <div className={style['section']}>
                 <Container fluid>
                   <Row>
-                    <Col xs="6" lg="4"
-                      className={style['img']}
-                      style={
-                        {
-                          backgroundImage: 'url(' + member.img + ')'
-                        }
-                      }
-                    >
+                    <Col xs="6" lg="4" className={style['image-placeholder']}>
+                      <LazyLoadImage className={style['img']} src={member.img} alt={member.name} />
                     </Col>
                     <Col xs="6" lg="8" className={style['info']}>
                       <h5 className={style['title']}>{member.name}</h5>

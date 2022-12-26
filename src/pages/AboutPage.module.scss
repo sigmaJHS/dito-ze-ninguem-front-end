@@ -6,7 +6,7 @@
   flex-direction: row;
 
   &:nth-of-type(odd){
-    .img{
+    .image-placeholder{
       order: 1;
     }
     .info{
@@ -14,7 +14,7 @@
     }
   }
   &:nth-of-type(even){
-    .img{
+    .image-placeholder{
       order: 2;
     }
     .info{
@@ -28,11 +28,14 @@
     }
   }
 
+  .image-placeholder {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
   .img {
     height: 350px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 
     @include media-breakpoint-up(sm){
       height: 400px
