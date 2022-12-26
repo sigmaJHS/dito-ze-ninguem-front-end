@@ -1,4 +1,4 @@
-// import { Container, Row, Col} from 'react-bootstrap';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import logo from './../assets/logo.png'
 
 import { AiOutlineInstagram, AiOutlineWhatsApp, AiOutlineMail } from 'react-icons/ai'
@@ -8,7 +8,7 @@ function Footer () {
   return (
     <footer id={style['footer']}>
       <div className={style['logo-row']}>
-        <img src={logo} alt="Dito Zé Ninguém" />
+        <LazyLoadImage src={logo} alt="Dito Zé Ninguém" />
       </div>
       <div className={style['social-row']}>
         <a className={style['social-link']} target="blank" href="https://www.instagram.com/ditozeninguem/">
