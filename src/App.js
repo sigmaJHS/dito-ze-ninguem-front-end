@@ -7,7 +7,7 @@ import FixedBackground from './components/FixedBackground'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import GalleryPage from './pages/GalleryPage'
-import EventSchedule from './pages/EventSchedule'
+import SchedulePage from './pages/SchedulePage'
 import ContactPage from './pages/ContactPage'
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
     {
       name: 'Agenda',
       path: '/agenda',
-      page: EventSchedule,
+      page: SchedulePage,
       exact: false
     },
     {

@@ -51,6 +51,7 @@
       &.button-column {
         display: none;
         vertical-align: middle;
+        text-align: right;
 
         @include media-breakpoint-up(xl) {
           display: table-cell;
@@ -58,6 +59,8 @@
       }
 
       .button {
+        text-transform: uppercase;
+        margin: 0 5px;
         color: $low-emphasys-text;
         text-decoration: none;
         line-height: 1;
