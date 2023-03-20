@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "img": "slides/3.jpg",
+    "caption": "Slide 1",
+    "link": "/sobre"
+  },
+  {
+    "id": "2",
+    "img": "slides/4.jpg",
+    "caption": "Slide 2",
+    "link": "/contato"
+  },
+  {
+    "id": "3",
+    "img": "slides/6.jpg",
+    "caption": "Slide 3",
+    "link": "/sobre"
+  },
+  {
+    "id": "4",
+    "img": "slides/8.jpg",
+    "caption": "Slide 4",
+    "link": "/contato"
+  }
+]

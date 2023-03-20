@@ -1,15 +1,18 @@
 @import './../style/main.scss';
 
-.carousel-img{
+.slide{
   width: 100%;
   height: 450px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
 
   @include media-breakpoint-up(xl) {
     height: 500px;
   }
+}
+
+.carousel-img{
+  width: 100%;
+  height: 100%;
 }
 
 .slide-holder {
