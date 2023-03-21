@@ -2,25 +2,22 @@
   {
     "id": "1",
     "img": "slides/3.jpg",
-    "caption": "Slide 1",
-    "link": "/sobre"
+    "caption": "Confira nossa agenda de shows!",
+    "description": "Todos os eventos que temos marcados estão aqui no nosso site, encontre um perto de você!",
+    "link": "/agenda"
   },
   {
     "id": "2",
-    "img": "slides/4.jpg",
-    "caption": "Slide 2",
-    "link": "/contato"
+    "img": "slides/6.jpg",
+    "caption": "Acompanhe nossas redes sociais!",
+    "description": "Nos siga no Instagram e fique por dentro de todas as nossas novidades, sempre tem espaço para mais um!",
+    "link": "https://www.instagram.com/ditozeninguem/"
   },
   {
     "id": "3",
-    "img": "slides/6.jpg",
-    "caption": "Slide 3",
-    "link": "/sobre"
-  },
-  {
-    "id": "4",
-    "img": "slides/8.jpg",
-    "caption": "Slide 4",
+    "img": "slides/4.jpg",
+    "caption": "Fale com a gente!",
+    "description": "Encontre todos os nossos canais de comunicação aqui!",
     "link": "/contato"
   }
 ]

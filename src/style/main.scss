@@ -55,6 +55,18 @@ a {
   }
 
   @include media-breakpoint-up(lg){
-    margin: 0 150px;
+    margin: 0 120px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .carousel-control-prev{
+    left: unset;
+    right: 100%;
+  }
+
+  .carousel-control-next{
+    right: unset;
+    left: 100%;
   }
 }

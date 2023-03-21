@@ -12,11 +12,14 @@ function SlideCarousel () {
           slides.map(
             function (current) {
               return (
-                <Carousel.Item key={current.id}>
-                  <img className={style['carousel-img']} src={ current.img } alt={current.caption} />
-                  <Carousel.Caption>
-                    <h4>{current.caption}</h4>
-                  </Carousel.Caption>
+                <Carousel.Item className={style['slide']} key={current.id}>
+                  <a href={ current.link } target="blank">
+                    <div className={style['carousel-img']} style={ {backgroundImage: `url(${current.img})`} }></div>
+                    <Carousel.Caption className={style['carousel-caption']}>
+                      <h4>{current.caption}</h4>
+                      <p>{current.description}</p>
+                    </Carousel.Caption>
+                  </a>
                 </Carousel.Item>
               )
             }

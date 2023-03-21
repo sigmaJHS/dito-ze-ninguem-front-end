@@ -1,20 +1,5 @@
 @import './../style/main.scss';
 
-.slide{
-  width: 100%;
-  height: 450px;
-  overflow: hidden;
-
-  @include media-breakpoint-up(xl) {
-    height: 500px;
-  }
-}
-
-.carousel-img{
-  width: 100%;
-  height: 100%;
-}
-
 .slide-holder {
   display: flex;
   flex-direction: row;
@@ -26,5 +11,70 @@
 
   @include media-breakpoint-up(lg) {
     width: 75%;
+  }
+
+  .slide{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+
+    @include media-breakpoint-up(sm) {
+      height: 450px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      height: 500px;
+    }
+
+    .carousel-img{
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      transition: 0.4s;
+    }
+    
+    .carousel-caption{
+      text-align: left;
+      padding-top: 20px;
+      padding-bottom: 50px;
+      padding-left: 15px;
+      padding-right: 15px;
+      background-image: linear-gradient(#000a,#000e);
+      width: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: 0.4s;
+
+      
+      @include media-breakpoint-up(sm) {
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+    
+      h4 {
+        color: $high-emphasys-text;
+        text-transform: uppercase;
+      }
+      p {
+        color: $low-emphasys-text;
+      }
+    }
+    
+    &:hover {
+      .carousel-img{
+        width: 105%;
+        height: 105%;
+        margin-top: -2.5%;
+        margin-left: -2.5%;
+      }
+
+      .carousel-caption{
+        background-image: linear-gradient(#000b,#000f);
+        padding-bottom: 60px;
+      }
+    }
   }
 }
