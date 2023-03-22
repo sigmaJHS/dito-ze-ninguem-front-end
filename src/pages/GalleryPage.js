@@ -5,6 +5,8 @@ import FsLightbox from "fslightbox-react";
 
 import style from './GalleryPage.module.scss';
 
+import images from './../gallery.json';
+
 function GalleryPage () {
 
   const [lightboxController, setLightboxController] = useState(
@@ -20,16 +22,6 @@ function GalleryPage () {
 			slide: number
 		});
 	}
-
-  const images = [];
-  for(let i=1; i<=16; i++) {
-    images.push(
-      {
-        id: i,
-        src: process.env.REACT_APP_FILE_STORAGE + '/?filename=' + i + '.jpg'
-      }
-    );
-  }
   
   return (
     <div>
