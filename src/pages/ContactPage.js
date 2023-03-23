@@ -4,10 +4,6 @@ import ContactForm from './../components/ContactForm';
 import style from './ContactPage.module.scss';
 
 function ContactPage(){
-  function sendHTTPRequest(formData) {
-    console.log(formData);
-  }
-
   return(
     <div>
       <h1 className='page-title'>Contato para Shows</h1>
@@ -36,7 +32,7 @@ function ContactPage(){
               <Container>
                 <h5 className={style['contact-title']}>Ou envie uma mensagem agora mesmo!</h5>
                 <p className={style['contact-description']}>Mande suas dúvidas, sugestões, desabafos, devaneios, epifanias. Buscamos responder dentro de 24 horas</p>
-                <ContactForm onFormSubmited={sendHTTPRequest} />
+                <ContactForm />
               </Container>
             </Col>
           </Row>
