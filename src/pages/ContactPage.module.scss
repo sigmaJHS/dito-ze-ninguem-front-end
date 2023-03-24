@@ -1,5 +1,13 @@
 @import './../style/main';
 
+.contact-right{
+  margin-top: 40px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 0px;
+  }
+}
+
 .contact-title {
   color: $high-emphasys-text;
   text-transform: uppercase;
