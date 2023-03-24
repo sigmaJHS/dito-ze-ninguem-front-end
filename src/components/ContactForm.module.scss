@@ -30,4 +30,24 @@
       background: transparent;
     }
   }
+
+  .spin {
+    margin-left: 10px;
+  }
+}
+
+.response {
+  margin-top: 20px;
+
+  p {
+    padding: 10px;
+
+    &.success {
+      background: rgba($success, 0.7);
+    }
+    &.error {
+      background: rgba($error, 0.7);
+    }
+  }
+
 }

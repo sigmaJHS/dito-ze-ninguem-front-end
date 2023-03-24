@@ -1,11 +1,20 @@
+import { useState } from 'react';
+import spin from './../assets/90-ring.svg'
+
 import style from './ContactForm.module.scss';
 
 import emailjs from '@emailjs/browser';
 
 function ContactForm () {
 
+  const [isSending, setIsSending] = useState(false);
+  const [response, setResponse] = useState('');
+
   function submitHandler (event) {
     event.preventDefault();
+    
+    setIsSending(true);
+    setResponse('');
 
     emailjs.sendForm(
       process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -14,10 +23,18 @@ function ContactForm () {
       process.env.REACT_APP_EMAILJS_PUBLIC_KEY
     ).then(
       function (result) {
-        console.log('success',result);
+        setResponse(
+          (result.status == '200')
+          ? 'success'
+          : 'error'
+        );
       },
-      function (error) {
-        console.log('error',error.text);
+      function () {
+        setResponse('error');
+      }
+    ).finally(
+      function () {
+        setIsSending(false);
       }
     );
   }
@@ -38,6 +55,22 @@ function ContactForm () {
       </div>
       <div className={style['actions']}>
         <button className={style['send']}>Enviar</button>
+        {
+          (isSending && response == '')
+          ? (<img className={style['spin']} src={ spin } alt="enviando..." />)
+          : ''
+        }
+      </div>
+      <div className={style['response']}>
+        {
+          (response == 'success')
+          ? (<p className={style['success']}>Sua mensagem foi enviada com sucesso, buscaremos responder o quanto antes!</p>)
+          : (
+            (response == 'error')
+            ? (<p className={style['error']}>Houve um problema ao enviar sua mensagem, se o erro persistir, por favor nos avise através de outro canal de comunicação!</p>)
+            : ''
+          )
+        }
       </div>
     </form>
   )
